@@ -150,6 +150,23 @@
             font-size: 0.95rem;
         }
 
+        .footer-links {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
         .lang-content {
             display: none;
         }
@@ -260,6 +277,10 @@
         </div>
 
         <footer class="footer">
+            <div class="footer-links">
+                <a href="about.html" id="link-about" style="font-weight: bold;">About App</a>
+                <a href="privacy.html" id="link-privacy">Privacy Policy</a>
+            </div>
             <p>Developed with heart for your spiritual journey.</p>
             <p>&copy; 2026 EverNear Team. All rights reserved.</p>
         </footer>
@@ -272,6 +293,10 @@
             
             document.getElementById('content-' + lang).classList.add('visible');
             document.getElementById('btn-' + lang).classList.add('active');
+
+            // Update footer links based on lang
+            document.getElementById('link-about').innerText = (lang === 'ko' ? '앱 소개' : 'About App');
+            document.getElementById('link-privacy').innerText = (lang === 'ko' ? '개인정보처리방침' : 'Privacy Policy');
         }
     </script>
 </body>
