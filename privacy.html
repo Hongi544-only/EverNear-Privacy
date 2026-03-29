@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EverNear (늘 곁에) - Privacy Policy</title>
+    <style>
+        :root {
+            --primary-color: #7c9473;
+            --secondary-color: #cfd6ad;
+            --bg-color: #fdfbfb;
+            --text-color: #444;
+            --text-light: #777;
+            --card-bg: #ffffff;
+            --shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 90%;
+            padding: 60px 20px;
+            margin-bottom: 100px;
+        }
+
+        .lang-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: var(--card-bg);
+            padding: 5px;
+            border-radius: 30px;
+            box-shadow: var(--shadow);
+            display: flex;
+            gap: 5px;
+        }
+
+        .lang-btn {
+            border: none;
+            padding: 8px 18px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+            font-size: 0.9rem;
+            background: transparent;
+            color: var(--text-light);
+        }
+
+        .lang-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        .header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .content-card {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: var(--shadow);
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            border-left: 4px solid var(--primary-color);
+            padding-left: 15px;
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+
+        p, li {
+            font-size: 1rem;
+            color: var(--text-color);
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .footer {
+            margin-top: 60px;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Language Toggle Classes */
+        .lang-content {
+            display: none;
+        }
+
+        .lang-content.visible {
+            display: block;
+        }
+
+        @media (max-width: 600px) {
+            .header h1 { font-size: 2rem; }
+            .content-card { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="lang-switch">
+        <button id="btn-ko" class="lang-btn active" onclick="switchLang('ko')">한국어</button>
+        <button id="btn-en" class="lang-btn" onclick="switchLang('en')">English</button>
+    </div>
+
+    <div class="container">
+        <header class="header">
+            <h1 id="app-name">EverNear</h1>
+            <p id="page-subtitle">Privacy Policy</p>
+        </header>
+
+        <main class="content-card">
+            <!-- Korean Content -->
+            <div id="content-ko" class="lang-content visible">
+                <section>
+                    <h2>1. 개인정보 처리 방침의 목적</h2>
+                    <p>'EverNear (늘 곁에)' 팀(이하 "개발자")은 사용자의 소중한 정보를 최우선으로 생각합니다. 본 방침은 앱 이용 시 어떠한 정보가 어떻게 관리되는지 투명하게 안내합니다.</p>
+                </section>
+
+                <section>
+                    <h2>2. 데이터 보관 방식 (로컬 우선)</h2>
+                    <p>본 앱은 <strong>'로컬 전용(Local-only)'</strong> 구조를 채택하고 있습니다. 사용자가 입력한 모든 대화 기록, 기도문, 성경 구절 데이터는 오직 사용자의 기기 내부에만 암호화되어 저장됩니다. 개발자는 어떠한 방식으로도 사용자의 데이터를 수집하거나 서버에 저장하지 않습니다.</p>
+                </section>
+
+                <section>
+                    <h2>3. AI 서비스 (Gemini API) 이용 및 데이터 전달</h2>
+                    <p>본 앱은 맞춤형 성경 메시지와 대화 기능을 위해 Google의 Gemini API를 사용합니다. 이 과정에서:</p>
+                    <ul>
+                        <li>사용자가 입력한 메시지는 해당 기능을 수행하기 위해 Google로 전달됩니다.</li>
+                        <li>단, 사용자의 개인 식별 정보(이름, 이메일 등)는 전달되지 않으며 오직 대화 맥락만 전달됩니다.</li>
+                        <li>모든 API 통신은 보안 프로토콜(HTTPS)을 통해 안전하게 암호화됩니다.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>4. 제3자 제공 및 위탁</h2>
+                    <p>개발자는 사용자의 동의 없이 개인정보를 외부에 제공하거나 위탁하지 않습니다. (Gemini API 이용을 제외한 일체의 데이터 흐름이 없습니다.)</p>
+                </section>
+
+                <section>
+                    <h2>5. 사용자의 권리</h2>
+                    <p>사용자는 언제든지 앱 내부의 [모든 데이터 초기화] 기능을 통해 기기에 저장된 모든 정보를 스스로 삭제할 수 있습니다.</p>
+                </section>
+
+                <section>
+                    <h2>6. 연락처</h2>
+                    <p>본 방침이나 앱 이용에 관한 문의는 개발자에게 연락해 주시기 바랍니다.<br>
+                    <strong>Email: support@evernear.app (또는 원기님의 메일주소)</strong></p>
+                </section>
+            </div>
+
+            <!-- English Content -->
+            <div id="content-en" class="lang-content">
+                <section>
+                    <h2>1. Purpose of Privacy Policy</h2>
+                    <p>The 'EverNear' team ("Developer") prioritizes your privacy. This policy outlines how your information is managed during app use.</p>
+                </section>
+
+                <section>
+                    <h2>2. Data Storage (Local-First)</h2>
+                    <p>Our app adopts a <strong>'Local-only'</strong> architecture. All chat logs, prayers, and Bible data are stored exclusively on your device in an encrypted format. The Developer does not collect or store your data on any central server.</p>
+                </section>
+
+                <section>
+                    <h2>3. AI Service (Gemini API) Usage</h2>
+                    <p>We use Google's Gemini API for personalized Bible study and chat features. During this process:</p>
+                    <ul>
+                        <li>Your messages are transmitted to Google to process the response.</li>
+                        <li>No personally identifiable information (PII) is shared; only the conversation context.</li>
+                        <li>All API communications are safely encrypted via HTTPS.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>4. Third-Party Sharing</h2>
+                    <p>The Developer does not share or entrust your data to third parties, except for the necessary operation of the Gemini API.</p>
+                </section>
+
+                <section>
+                    <h2>5. User Rights</h2>
+                    <p>Users can delete all data stored on their device at any time using the [Reset All Data] feature within the app settings.</p>
+                </section>
+
+                <section>
+                    <h2>6. Contact Information</h2>
+                    <p>If you have any questions, please contact the developer:<br>
+                    <strong>Email: support@evernear.app (or your email address)</strong></p>
+                </section>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 EverNear Team. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('visible'));
+            document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+            
+            document.getElementById('content-' + lang).classList.add('visible');
+            document.getElementById('btn-' + lang).classList.add('active');
+            
+            // Optional: Change header text based on lang
+            document.getElementById('page-subtitle').innerText = (lang === 'ko' ? '개인정보처리방침' : 'Privacy Policy');
+        }
+    </script>
+</body>
+</html>

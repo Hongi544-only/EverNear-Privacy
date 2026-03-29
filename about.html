@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EverNear (늘 곁에) - About the App</title>
+    <style>
+        :root {
+            --primary-color: #7c9473;
+            --secondary-color: #cfd6ad;
+            --bg-color: #fdfbfb;
+            --text-color: #444;
+            --text-light: #777;
+            --card-bg: #ffffff;
+            --shadow: 0 10px 30px rgba(0,0,0,0.05);
+            --gradient: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 90%;
+            padding: 80px 20px;
+        }
+
+        .lang-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: var(--card-bg);
+            padding: 5px;
+            border-radius: 30px;
+            box-shadow: var(--shadow);
+            display: flex;
+            gap: 5px;
+        }
+
+        .lang-btn {
+            border: none;
+            padding: 8px 18px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+            font-size: 0.9rem;
+            background: transparent;
+            color: var(--text-light);
+        }
+
+        .lang-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .hero h1 {
+            color: var(--primary-color);
+            font-size: 3.5rem;
+            margin: 0 0 10px 0;
+            letter-spacing: -2px;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            color: var(--text-light);
+            font-weight: 300;
+        }
+
+        .section {
+            margin-bottom: 80px;
+            background-color: var(--card-bg);
+            padding: 50px;
+            border-radius: 32px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-item {
+            padding: 24px;
+            border-radius: 20px;
+            background-color: #f9fbf8;
+            border: 1px solid #eff3ed;
+        }
+
+        .feature-item strong {
+            display: block;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .feature-item span {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        .quote {
+            text-align: center;
+            font-style: italic;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin: 40px 0;
+            padding: 20px;
+            background: var(--gradient);
+            border-radius: 16px;
+        }
+
+        .footer {
+            margin-top: 100px;
+            margin-bottom: 50px;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .lang-content {
+            display: none;
+        }
+
+        .lang-content.visible {
+            display: block;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2.5rem; }
+            .section { padding: 30px; }
+            .feature-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="lang-switch">
+        <button id="btn-ko" class="lang-btn active" onclick="switchLang('ko')">한국어</button>
+        <button id="btn-en" class="lang-btn" onclick="switchLang('en')">English</button>
+    </div>
+
+    <div class="container">
+        <!-- Korean About Content -->
+        <div id="content-ko" class="lang-content visible">
+            <header class="hero">
+                <h1>EverNear (늘 곁에)</h1>
+                <p>당신의 매일이 주님의 말씀과 함께하기를.</p>
+            </header>
+
+            <main>
+                <section class="section">
+                    <h2>🌱 기획자의 마음</h2>
+                    <p>기술이 아무리 빠르게 발전하더라도, 그 기술 안에도 하나님의 선하신 뜻이 함께한다고 믿습니다.</p>
+                    <p>'EverNear'는 AI가 말씀을 대신하거나 해석하려는 앱이 아닙니다. 바쁜 일상 속에서 성경을 펼치기 어려운 순간, 지치고 힘든 마음에 따뜻한 말씀 한 줄을 건네주는 작은 다리가 되고자 합니다.</p>
+                    <p>모든 위로의 근원은 말씀 그 자체에 있으며, 이 앱은 그 말씀이 당신의 하루에 늘 곁에 머물 수 있도록 돕는 도구일 뿐입니다.</p>
+                </section>
+
+                <section class="section">
+                    <h2>✨ 주요 기능</h2>
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <strong>오늘의 말씀 알림</strong>
+                            <span>매일 아침 설정하신 시간에 당신만을 위한 따뜻한 말씀을 보내드립니다.</span>
+                        </div>
+                        <div class="feature-item">
+                            <strong>영적 대화 상담</strong>
+                            <span>현재의 고민과 마음을 털어놓으세요. 말씀에 근거한 위로와 기도를 전해드립니다.</span>
+                        </div>
+                        <div class="feature-item">
+                            <strong>말씀 암송</strong>
+                            <span>랜덤하게 매번 바뀌는 아름다운 일러스트와 함께 말씀을 마음속에 새겨보세요.</span>
+                        </div>
+                        <div class="feature-item">
+                            <strong>개인 기도함</strong>
+                            <span>주님께 드리고 싶은 기도를 기록하고 보관하세요. 개인정보는 오직 당신의 기기에만 저장됩니다.</span>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="quote">
+                    "내가 세상 끝날까지 너희와 항상 함께 있으리라 하시니라" — 마태복음 28:20
+                </div>
+            </main>
+        </div>
+
+        <!-- English About Content -->
+        <div id="content-en" class="lang-content">
+            <header class="hero">
+                <h1>EverNear</h1>
+                <p>Walking with God's Word in your daily life.</p>
+            </header>
+
+            <main>
+                <section class="section">
+                    <h2>🌱 Our Vision</h2>
+                    <p>We believe that even in rapidly advancing technology, God's good will resides. </p>
+                    <p>'EverNear' is not about AI replacing or interpreting the Bible. It's about being a small bridge that offers a warm line of Scripture when you're too busy or exhausted to open your Bible in your hectic daily life.</p>
+                    <p>The source of all comfort is in the Word itself. This app is merely a tool to help that Word stay close to you throughout your day.</p>
+                </section>
+
+                <section class="section">
+                    <h2>✨ Key Features</h2>
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <strong>Daily Verse Notification</strong>
+                            <span>Recieve personalized morning verses every day at your preferred time.</span>
+                        </div>
+                        <div class="feature-item">
+                            <strong>Spiritual Conversations</strong>
+                            <span>Share your worries. We provide comfort and prayers based on the Holy Bible.</span>
+                        </div>
+                        <div class="feature-item">
+                            <strong>Verse Meditation</strong>
+                            <span>Keep God's Word in your heart with beautiful, changing illustrations.</span>
+                        </div>
+                        <div class="feature-item">
+                            <strong>Private Prayer Storage</strong>
+                            <span>Record and keep your prayers. All data stays securely on your device.</span>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="quote">
+                    "And behold, I am with you always, to the end of the age." — Matthew 28:20
+                </div>
+            </main>
+        </div>
+
+        <footer class="footer">
+            <p>Developed with heart for your spiritual journey.</p>
+            <p>&copy; 2026 EverNear Team. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('visible'));
+            document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+            
+            document.getElementById('content-' + lang).classList.add('visible');
+            document.getElementById('btn-' + lang).classList.add('active');
+        }
+    </script>
+</body>
+</html>
